@@ -85,36 +85,26 @@ body {
 
 .contenedor-header header nav ul li a {
     color: var(--text-primary);
-    margin: 0 15px;
-    padding: 8px 16px;
+    margin: 0 5px;
+    padding: 10px 20px;
     transition: all 0.3s ease;
     text-decoration: none;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 14px;
     position: relative;
     text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.contenedor-header header nav ul li a::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    width: 0;
-    height: 2px;
-    background: linear-gradient(90deg, var(--accent-cyan), var(--accent-purple));
-    transform: translateX(-50%);
-    transition: width 0.3s ease;
-}
-
-.contenedor-header header nav ul li a:hover::before {
-    width: 100%;
+    letter-spacing: 2px;
+    clip-path: polygon(10% 0, 100% 0, 100% 70%, 90% 100%, 0 100%, 0 30%);
+    background: rgba(0, 240, 255, 0.05);
+    border: 1px solid rgba(0, 240, 255, 0.1);
 }
 
 .contenedor-header header nav ul li a:hover {
-    color: var(--accent-cyan);
-    text-shadow: var(--glow-cyan);
+    background: rgba(0, 240, 255, 0.2);
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.4);
+    text-shadow: 0 0 5px #fff;
+    border-color: var(--accent-cyan);
+    color: #fff;
 }
 
 .nav-responsive {
@@ -503,6 +493,10 @@ body {
     animation-delay: 0.8s;
 }
 
+.sobremi .fila .col .contenedor-intereses .interes:nth-child(9) {
+    animation-delay: 0.9s;
+}
+
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -669,6 +663,19 @@ body {
     background: linear-gradient(135deg, #ffd700, #ffc107);
 }
 
+.sobremi .fila .col .contenedor-intereses .interes[data-color="blue"] .interes-front {
+    border-color: #1e90ff;
+    background: rgba(30, 144, 255, 0.1);
+}
+
+.sobremi .fila .col .contenedor-intereses .interes[data-color="blue"]:hover .interes-front {
+    box-shadow: 0 0 30px rgba(30, 144, 255, 0.6);
+}
+
+.sobremi .fila .col .contenedor-intereses .interes[data-color="blue"] .interes-back {
+    background: linear-gradient(135deg, #1e90ff, #4169e1);
+}
+
 /* Icon styles with pulse animation */
 .sobremi .fila .col .contenedor-intereses .interes-front i {
     font-size: 36px;
@@ -819,6 +826,15 @@ body {
     margin-bottom: 30px;
     color: var(--accent-purple);
     text-shadow: 0 0 10px rgba(181, 55, 242, 0.5);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.curriculum .fila .col h3 i {
+    font-size: 28px;
+    color: var(--accent-cyan);
+    animation: iconPulse 2s ease-in-out infinite;
 }
 
 .curriculum .fila .izquierda {
@@ -839,13 +855,37 @@ body {
     position: relative;
     border-radius: 15px;
     border: 1px solid rgba(0, 240, 255, 0.3);
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.curriculum .fila .item:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.curriculum .fila .item:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.curriculum .fila .item:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.curriculum .fila .item:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.curriculum .fila .item:nth-child(5) {
+    animation-delay: 0.5s;
 }
 
 .curriculum .fila .item:hover {
-    transform: translateX(10px);
+    transform: translateY(-10px) scale(1.02);
     border-color: var(--accent-cyan);
-    box-shadow: 0 0 30px rgba(0, 240, 255, 0.3);
+    box-shadow: 0 0 40px rgba(0, 240, 255, 0.4);
+    background: rgba(26, 31, 58, 0.95);
 }
 
 .curriculum .fila .item h4 {
@@ -853,27 +893,75 @@ body {
     margin-bottom: 10px;
     color: var(--text-primary);
     font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.curriculum .fila .item:hover h4 {
+    color: var(--accent-cyan);
 }
 
 .curriculum .fila .item .casa {
     color: var(--accent-cyan);
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
-    display: block;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
     text-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
 }
 
+.curriculum .fila .item .casa i {
+    font-size: 18px;
+}
+
 .curriculum .fila .item .fecha {
-    display: block;
+    display: inline-block;
     color: var(--accent-green);
     margin: 10px 0;
     font-weight: 600;
+    font-size: 14px;
+    padding: 4px 12px;
+    background: rgba(57, 255, 20, 0.1);
+    border-radius: 20px;
+    border: 1px solid var(--accent-green);
     text-shadow: 0 0 5px var(--accent-green);
 }
 
 .curriculum .fila .item p {
     line-height: 24px;
     color: var(--text-secondary);
+    margin: 15px 0;
+    font-size: 15px;
+}
+
+/* Technology Badges */
+.curriculum .fila .item .tecnologias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.curriculum .fila .item .tech-badge {
+    display: inline-block;
+    padding: 6px 14px;
+    background: linear-gradient(135deg, rgba(0, 240, 255, 0.2), rgba(181, 55, 242, 0.2));
+    border: 1px solid var(--accent-cyan);
+    border-radius: 20px;
+    color: var(--text-primary);
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 240, 255, 0.2);
+}
+
+.curriculum .fila .item .tech-badge:hover {
+    background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.6);
 }
 
 .curriculum .fila .izq {
@@ -920,8 +1008,8 @@ body {
     }
 
     50% {
-        box-shadow: 0 0 25px var(--accent-cyan);
-        transform: scale(1.2);
+        box-shadow: 0 0 25px var(--accent-cyan), 0 0 35px rgba(0, 240, 255, 0.5);
+        transform: scale(1.3);
     }
 }
 
@@ -1390,4 +1478,243 @@ body {
         width: 100%;
         max-width: 340px;
     }
+}/* =========================================
+   CYBERPUNK UPGRADE IMPROVEMENTS
+   ================================********* */
+
+/* --- 1. Custom Scrollbar --- */
+::-webkit-scrollbar {
+    width: 8px;
+    background: #0a0e27;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--accent-cyan), var(--accent-purple));
+    border-radius: 4px;
+}
+
+/* --- 2. Custom Selection --- */
+::selection {
+    background: var(--accent-purple);
+    color: #fff;
+}
+
+/* --- 3. Custom Cursor --- */
+.cursor {
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--accent-cyan);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    transition: all 0.1s ease;
+    transition-property: background, border, transform;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+}
+
+.cursor2 {
+    width: 8px;
+    height: 8px;
+    background-color: var(--accent-cyan);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    transition: all 0.05s ease;
+    transform: translate(-50%, -50%);
+}
+
+.cursor-hover {
+    transform: translate(-50%, -50%) scale(2.5);
+    background-color: rgba(0, 240, 255, 0.1);
+    border-color: transparent;
+}
+
+
+/* --- 4. Glitch Effect --- */
+.glitch {
+    position: relative;
+}
+
+.glitch::before,
+.glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--primary-bg);
+    /* Matches background to "hide" main text */
+}
+
+.glitch::before {
+    left: 2px;
+    text-shadow: -1px 0 #ff00c1;
+    clip: rect(44px, 450px, 56px, 0);
+    animation: glitch-anim 5s infinite linear alternate-reverse;
+}
+
+.glitch::after {
+    left: -2px;
+    text-shadow: -1px 0 #00fff9;
+    clip: rect(44px, 450px, 56px, 0);
+    animation: glitch-anim2 5s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim {
+    0% {
+        clip: rect(32px, 9999px, 12px, 0);
+    }
+
+    20% {
+        clip: rect(62px, 9999px, 83px, 0);
+    }
+
+    40% {
+        clip: rect(18px, 9999px, 2px, 0);
+    }
+
+    60% {
+        clip: rect(93px, 9999px, 46px, 0);
+    }
+
+    80% {
+        clip: rect(5px, 9999px, 56px, 0);
+    }
+
+    100% {
+        clip: rect(24px, 9999px, 89px, 0);
+    }
+}
+
+@keyframes glitch-anim2 {
+    0% {
+        clip: rect(76px, 9999px, 3px, 0);
+    }
+
+    20% {
+        clip: rect(2px, 9999px, 67px, 0);
+    }
+
+    40% {
+        clip: rect(38px, 9999px, 92px, 0);
+    }
+
+    60% {
+        clip: rect(81px, 9999px, 21px, 0);
+    }
+
+    80% {
+        clip: rect(12px, 9999px, 53px, 0);
+    }
+
+    100% {
+        clip: rect(54px, 9999px, 99px, 0);
+    }
+}
+
+/* --- 5. Typewriter Effect --- */
+.txt-type {
+    border-right: 0.2rem solid var(--accent-cyan);
+    padding-right: 5px;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: var(--accent-cyan)
+    }
+}
+
+/* --- 6. Stats HUD (Datos Personales) --- */
+.hud-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.hud-item {
+    background: rgba(0, 240, 255, 0.05);
+    border: 1px solid rgba(0, 240, 255, 0.2);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 90% 100%, 0 100%);
+    transition: all 0.3s ease;
+}
+
+.hud-item:hover {
+    background: rgba(0, 240, 255, 0.1);
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.2);
+}
+
+.hud-item.special {
+    border-color: var(--accent-green);
+    background: rgba(57, 255, 20, 0.05);
+}
+
+.hud-label {
+    font-size: 10px;
+    color: var(--text-secondary);
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.hud-value {
+    font-family: 'Orbitron', sans-serif;
+    color: #fff;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.email-value {
+    font-size: 11px;
+    /* Smaller for long email */
+    word-break: break-all;
+}
+
+.hud-value.online {
+    color: var(--accent-green);
+    text-shadow: 0 0 5px var(--accent-green);
+    animation: flash 2s infinite;
+}
+
+@keyframes flash {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* --- 7. Terminal Inputs (Contact Form) --- */
+.contacto .fila .col form input,
+.contacto .fila .col form textarea {
+    background: rgba(0, 0, 0, 0.3) !important;
+    border: none !important;
+    border-bottom: 2px solid rgba(0, 240, 255, 0.3) !important;
+    border-radius: 0 !important;
+    color: var(--accent-cyan) !important;
+    font-family: 'Space Mono', monospace !important;
+}
+
+.contacto .fila .col form input:focus,
+.contacto .fila .col form textarea:focus {
+    border-bottom-color: var(--accent-purple) !important;
+    box-shadow: 0 5px 15px rgba(0, 240, 255, 0.1) !important;
 }

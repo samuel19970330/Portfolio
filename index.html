@@ -14,6 +14,8 @@
 </head>
 
 <body>
+    <div class="cursor"></div>
+    <div class="cursor2"></div>
 
     <!--NAVBAR-->
 
@@ -22,7 +24,7 @@
     <div class="contenedor-header">
         <header>
             <div class="logo">
-                <a href="#">Sam</a>
+                <a href="#">Samuel S.</a>
             </div>
             <nav id="nav">
                 <ul>
@@ -46,8 +48,10 @@
             <div class="contenedor-img">
                 <img src="img/sam.png" alt="">
             </div>
-            <h1>Samuel Saldarriaga</h1>
-            <h2>Ingeniero en Sistemas</h2>
+            <h1 class="glitch" data-text="Samuel Saldarriaga">Samuel Saldarriaga</h1>
+            <h2><span class="txt-type" data-wait="3000"
+                    data-words='["Ingeniero de Sistemas", "Entusiasta de IA"]'></span>
+            </h2>
             <div class="redes">
                 <a href="https://www.facebook.com/samuel.saldarriagaaristizabal" target="_blank"><i
                         class="fa-brands fa-facebook-f"></i></a>
@@ -77,29 +81,32 @@
                 <!--Datos Personales-->
                 <div class="col">
                     <h3>Datos Personales</h3>
-                    <ul>
-                        <li>
-                            <strong>Cumpleaños</strong>
-                            30-03-1997
-                        </li>
-                        <li>
-                            <strong>Teléfono</strong>
-                            3006828890
-                        </li>
-                        <li>
-                            <strong>Email</strong>
-                            samuelsaldarriaga@artech.com.co
-                        </li>
-                        <li>
-                            <strong>WebSite</strong>
-                            www.artech.com.co
-                        </li>
-
-                        <li>
-                            <strong>Cargo</strong>
-                            <span>Freelance</span>
-                        </li>
-                    </ul>
+                    <div class="hud-grid">
+                        <div class="hud-item">
+                            <span class="hud-label">LEVEL (AGE)</span>
+                            <span class="hud-value">28</span>
+                        </div>
+                        <div class="hud-item">
+                            <span class="hud-label">COMM LINK</span>
+                            <span class="hud-value">300 682 8890</span>
+                        </div>
+                        <div class="hud-item">
+                            <span class="hud-label">NET ADDRESS</span>
+                            <span class="hud-value email-value">samuelsaldarriaga@artech.com.co</span>
+                        </div>
+                        <div class="hud-item">
+                            <span class="hud-label">ESTABLISHED</span>
+                            <span class="hud-value">www.artech.com.co</span>
+                        </div>
+                        <div class="hud-item">
+                            <span class="hud-label">CLASS</span>
+                            <span class="hud-value">FREELANCE</span>
+                        </div>
+                        <div class="hud-item special">
+                            <span class="hud-label">STATUS</span>
+                            <span class="hud-value online">ONLINE</span>
+                        </div>
+                    </div>
                 </div>
 
 
@@ -110,11 +117,11 @@
                         <div class="interes" data-color="cyan">
                             <div class="interes-inner">
                                 <div class="interes-front">
-                                    <i class="fa-solid fa-microchip"></i>
-                                    <span>TECNOLOGÍA</span>
+                                    <i class="fa-solid fa-shield-halved"></i>
+                                    <span>CIBERSEGURIDAD</span>
                                 </div>
                                 <div class="interes-back">
-                                    <p>Innovación y tendencias tech</p>
+                                    <p>Protección de datos y redes</p>
                                 </div>
                             </div>
                         </div>
@@ -154,11 +161,11 @@
                         <div class="interes" data-color="silver">
                             <div class="interes-inner">
                                 <div class="interes-front">
-                                    <i class="fa-brands fa-apple"></i>
-                                    <span>APPLE</span>
+                                    <i class="fa-solid fa-cloud"></i>
+                                    <span>CLOUD</span>
                                 </div>
                                 <div class="interes-back">
-                                    <p>Ecosistema Apple</p>
+                                    <p>Azure, Infraestructura en la nube</p>
                                 </div>
                             </div>
                         </div>
@@ -176,11 +183,11 @@
                         <div class="interes" data-color="red">
                             <div class="interes-inner">
                                 <div class="interes-front">
-                                    <i class="fa-solid fa-motorcycle"></i>
-                                    <span>MOTOS</span>
+                                    <i class="fa-solid fa-robot"></i>
+                                    <span>RPA</span>
                                 </div>
                                 <div class="interes-back">
-                                    <p>Velocidad y adrenalina</p>
+                                    <p>Automatización de procesos</p>
                                 </div>
                             </div>
                         </div>
@@ -192,6 +199,17 @@
                                 </div>
                                 <div class="interes-back">
                                     <p>Lectura y conocimiento</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="interes" data-color="blue">
+                            <div class="interes-inner">
+                                <div class="interes-front">
+                                    <i class="fa-solid fa-brain"></i>
+                                    <span>INTELIGENCIA ARTIFICIAL</span>
+                                </div>
+                                <div class="interes-back">
+                                    <p>IA y Machine Learning</p>
                                 </div>
                             </div>
                         </div>
@@ -213,69 +231,122 @@
             <h2>Curriculum</h2>
             <div class="fila">
                 <div class="col izquierda">
-                    <h3>Educación</h3>
+                    <h3><i class="fa-solid fa-graduation-cap"></i> Educación</h3>
                     <div class="item izq">
-                        <h4>Ingenieria en Sistemas</h4>
-                        <span class="casa">Institución Universitaria Marco Fidel Suarez</span>
-                        <span class="fecha">2019 - 2020</span>
+                        <h4>Ingeniería en Sistemas</h4>
+                        <span class="casa"><i class="fa-solid fa-building-columns"></i> Institución Universitaria Marco
+                            Fidel Suárez</span>
+                        <span class="fecha">2015 - 2020</span>
                         <p>
+                            Formación integral en desarrollo de software, infraestructura TI, bases de datos y
+                            metodologías ágiles.
+                            Enfoque en soluciones tecnológicas innovadoras y transformación digital.
                         </p>
-                        <div class="conectori">
-                            <div class="circuloi">
-
-                            </div>
+                        <div class="tecnologias">
+                            <span class="tech-badge">Java</span>
+                            <span class="tech-badge">C#</span>
+                            <span class="tech-badge">Redes</span>
+                            <span class="tech-badge">Bases de Datos</span>
+                            <span class="tech-badge">Metodologías Ágiles</span>
+                            <span class="tech-badge">Desarrollo de Software</span>
                         </div>
-                    </div>
-                    <div class="item izq">
-                        <h4>Ingenieria en Sistemas</h4>
-                        <span class="casa">Institución Universitaria Marco Fidel Suarez</span>
-                        <span class="fecha">2015 - 2017</span>
-                        <p>
-                        </p>
                         <div class="conectori">
-                            <div class="circuloi">
-
-                            </div>
+                            <div class="circuloi"></div>
                         </div>
                     </div>
                 </div>
 
                 <div class="col derecha">
-                    <h3>Experiencia Laboral</h3>
-                    <div class="item der">
-                        <h4>Desarrollador Junior</h4>
-                        <span class="casa">Iglesia Pentecostal Unida de Colombia</span>
-                        <span class="fecha">2022 - 2024</span>
-                        <p>
-                        </p>
-                        <div class="conectord">
-                            <div class="circulod">
+                    <h3><i class="fa-solid fa-briefcase"></i> Experiencia Laboral</h3>
 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item der">
-                        <h4>Ingeniero de Soporte de Producto</h4>
-                        <span class="casa">Factica SAS</span>
-                        <span class="fecha">2024 - 2025</span>
-                        <p>
-                        </p>
-                        <div class="conectord">
-                            <div class="circulod">
-
-                            </div>
-                        </div>
-                    </div>
                     <div class="item der">
                         <h4>Coordinador de Transformación Digital</h4>
-                        <span class="casa">Aceros Mapa SA</span>
+                        <span class="casa"><i class="fa-solid fa-industry"></i> Aceros Mapa SA</span>
                         <span class="fecha">2025 - Actualidad</span>
                         <p>
+                            Liderazgo en iniciativas de transformación digital, optimización de procesos mediante
+                            automatización
+                            y coordinación de proyectos tecnológicos estratégicos para mejorar la eficiencia
+                            operacional.
                         </p>
+                        <div class="tecnologias">
+                            <span class="tech-badge">n8n</span>
+                            <span class="tech-badge">Power BI</span>
+                            <span class="tech-badge">Azure</span>
+                            <span class="tech-badge">SQL Server</span>
+                            <span class="tech-badge">Gestión de Infraestructura TI</span>
+                            <span class="tech-badge">Power Automate</span>
+                            <span class="tech-badge">Gestión de Proyectos</span>
+                            <span class="tech-badge">Sharepoint</span>
+                            <span class="tech-badge">ERP Siesa</span>
+                            <span class="tech-badge">Wordpress </span>
+                        </div>
                         <div class="conectord">
-                            <div class="circulod">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
 
-                            </div>
+                    <div class="item der">
+                        <h4>Ingeniero de Soporte de Producto</h4>
+                        <span class="casa"><i class="fa-solid fa-laptop-code"></i> Factica SAS</span>
+                        <span class="fecha">2024 - 2025</span>
+                        <p>
+                            Soporte técnico especializado en productos de software, resolución de incidencias críticas,
+                            documentación técnica y mejora continua de procesos de atención al cliente.
+                        </p>
+                        <div class="tecnologias">
+                            <span class="tech-badge">SQL Server</span>
+                            <span class="tech-badge">Azure Devops</span>
+                            <span class="tech-badge">Excel Avanzado</span>
+                            <span class="tech-badge">Soporte Técnico</span>
+                        </div>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+
+                    <div class="item der">
+                        <h4>Desarrollador Junior</h4>
+                        <span class="casa"><i class="fa-solid fa-church"></i> Iglesia Pentecostal Unida de
+                            Colombia</span>
+                        <span class="fecha">2022 - 2024</span>
+                        <p>
+                            Desarrollo de aplicaciones web y móviles, implementación de sistemas de gestión,
+                            mantenimiento de bases de datos y colaboración en proyectos de digitalización institucional.
+                        </p>
+                        <div class="tecnologias">
+                            <span class="tech-badge">Angular</span>
+                            <span class="tech-badge">.Net Core</span>
+                            <span class="tech-badge">HTML/CSS</span>
+                            <span class="tech-badge">Visual Basic</span>
+                            <span class="tech-badge">SQL Server</span>
+                            <span class="tech-badge">MySQL</span>
+                            <span class="tech-badge">C#</span>
+                            <span class="tech-badge">Metodologías Ágiles</span>
+                            <span class="tech-badge">Git / GitHub</span>
+                            <span class="tech-badge">Wordpress</span>
+                        </div>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+
+                    <div class="item der">
+                        <h4>Ingeniero de Soporte</h4>
+                        <span class="casa"><i class="fa-solid fa-desktop"></i> American Scan</span>
+                        <span class="fecha">2020 - 2022</span>
+                        <p>
+                            Soporte técnico de dispositivos de medición, pesaje y escaneo, instalación, configuración y
+                            mantenimiento de software y hardware.
+                        </p>
+                        <div class="tecnologias">
+                            <span class="tech-badge">Datalogic</span>
+                            <span class="tech-badge">Jira</span>
+                            <span class="tech-badge">Windows</span>
+                            <span class="tech-badge">Helpdesk</span>
+                        </div>
+                        <div class="conectord">
+                            <div class="circulod"></div>
                         </div>
                     </div>
                 </div>
